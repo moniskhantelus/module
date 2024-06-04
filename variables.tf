@@ -116,20 +116,20 @@ variable "resource_policies" {
 variable "source_image" {
   description = "Source disk image. If neither source_image nor source_image_family is specified, defaults to the latest public Rocky Linux 9 optimized for GCP image."
   type        = string
-  default     = ""
+  default     = "debian-11-bullseye-v20240515"
 }
 
 variable "source_image_family" {
   description = "Source image family. If neither source_image nor source_image_family is specified, defaults to the latest public Rocky Linux 9 optimized for GCP image."
   type        = string
-  default     = "rocky-linux-9-optimized-gcp"
+  default     = "debian-11"
 }
 
-variable "source_image_project" {
+/*variable "source_image_project" {
   description = "Project where the source image comes from. The default project contains Rocky Linux images."
   type        = string
   default     = "rocky-linux-cloud"
-}
+}*/
 
 variable "disk_size_gb" {
   description = "Boot disk size in GB"
